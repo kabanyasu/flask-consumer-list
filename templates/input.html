@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>アップロードするcsvを選択する画面</title>
+    </head>
+    <body>
+        <h2>アップロードするcsvファイルを選択してください</h2>
+        <!--submitボタンをクリックすると、「/result」というURLにジャンプする-->
+        <form action="/result" method="post" enctype="multipart/form-data">
+            <!--「name="upload-file"」がflask側でキャッチする際の名前になる-->
+            <input type="file" name="upload-file" accept=".csv" required>
+            <br>
+            <p>--------------------------------------------------</p>
+            <input type="submit" value="アップロードを実行">
+        </form>
+    </body>
+</html>
